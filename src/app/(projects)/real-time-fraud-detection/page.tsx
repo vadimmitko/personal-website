@@ -1,15 +1,15 @@
 import MdxLayout from "@/app/(components)/mdx-layout";
-import StockExchangeSim from "@/app/markdown/stock-exchange-sim.mdx";
+import RealTimeFraudDetection from "@/app/markdown/real-time-fraud-detection.mdx";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Vadim Mitko | Stock exchange sim",
+  title: "Vadim Mitko | Real-time Fraud Detection",
 };
 
 export default function Project() {
   return (
     <MdxLayout>
-      <StockExchangeSim />
+      <RealTimeFraudDetection />
     </MdxLayout>
   );
 }

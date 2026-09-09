@@ -1,0 +1,48 @@
+import Image from "next/image";
+
+<h1 className="mb-2 text-2xl font-semibold">Real-Time Fraud Detection Microservice</h1>
+<div className="mb-4 text-left font-light">
+  _21st May, 2026_
+</div>
+
+During my last year of undergraduate degree in Computer Science, 
+I have stumbled upon a book called &apos;Designing Data-Intensive Applications&apos; by Martin Kleppman. You can find it pictured below:
+
+<Image
+  alt="data-intensive-appications-bool-front-cover"
+  src={"/data-intensive-applications.png"}
+  width={300}
+  height={300}
+  className="mx-auto mt-8 items-center justify-center"
+/>
+<div className="mb-8 mt-2 text-center font-light">
+  _Front cover for &apos;Designing Data-Intensive Applications&apos;_
+</div>
+
+Before this in my degree, I have not yet studied closely distributed systems and it was an exciting read
+because it shown me to which degree there is uncertainty and challenges all throughout the whole process of
+communication between machines on the network.
+
+<div className="mt-4">
+  When I started reading papers on fraud detection to pick a dissertation topic, I noticed something
+  that decided the project for me. Almost everything I found was about the algorithms: which model
+  classifies a fraudulent transaction best, how to handle class imbalance, which features matter.
+  Very little of it dealt with the infrastructure those models actually run on, even though a
+  detection system that cannot keep up with the transaction stream is not much use regardless of how
+  accurate the classifier is. That gap is what I wanted to contribute to, so I built the pipeline
+  rather than the model.
+</div>
+
+<div className="mt-4">
+  Most of the stack was new to me. I wrote the services in Go, which I had barely touched before,
+  and used Kafka to move transaction events between them, Cassandra to store the ones that got
+  flagged, and Docker to run everything locally. I also added a small REST API for querying flagged
+  transactions, with the Cassandra tables partitioned into time buckets so a date-range query does
+  not have to look at the whole dataset, and put the detection rules in YAML config files so I could
+  change what counts as suspicious without touching the Go code.
+</div>
+<div className="mt-4">
+My department was kind enough to allow me to publish the source code after the consolidation of grades, so I would appreciate if you could 
+check it out! It is live on my github account (simply click <a href="https://github.com/vadimmitko/ug-cs-dissertation" target="_blank" rel="noopener noreferrer" className="underline">here</a> to open it in a new window!).
+</div>
+

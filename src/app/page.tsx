@@ -9,18 +9,14 @@ export default function Home() {
   return (
     <div id="projects">
       <ProjectLadder className="mx-auto mt-48 max-w-[500px] overflow-hidden font-mono md:max-w-[650px]">
-        <ProjectLadder.Project
-          projectId=""
-          className="ml-[52%]"
-          isClickable={false}
-        >
-          In progress...
+        <ProjectLadder.Project projectId="redis-clone" className="ml-[52%]">
+          Redis Clone
         </ProjectLadder.Project>
         <ProjectLadder.Project
-          projectId="stock-exchange-sim"
+          projectId="real-time-fraud-detection"
           className="ml-[26%]"
         >
-          Stock Exchange Simulator
+          Real-time Fraud Detection
         </ProjectLadder.Project>
         <ProjectLadder.Project projectId="personal-website">
           Personal website
