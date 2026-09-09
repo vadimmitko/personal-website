@@ -18,12 +18,12 @@ const robotoMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Vadim Mitko",
-  description: "I am a software engineer based in York, UK.",
+  description: "I am a software engineer based in London, UK.",
   metadataBase: new URL("https://vadimmitko.vercel.app"),
   openGraph: {
     siteName: "Vadim Mitko's personal website",
     title: "Vadim Mitko's personal website",
-    description: "I am a software engineer based in York, UK.",
+    description: "I am a software engineer based in London, UK.",
     url: new URL("https://vadimmitko.vercel.app"),
   },
 };
